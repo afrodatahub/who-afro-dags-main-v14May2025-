@@ -1,0 +1,27 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+apache-airflow = "~=2.9"
+python-dotenv = "~=1.0"
+pandas = "~=2.1" #airflow might cause trouble with >2.1
+pymysql = "~=1.1"
+pyarrow = "~=16.1"
+pendulum = "*"
+ckanapi = "~=4.8"
+sqlalchemy = "~=1.4" #not compatible with pandas 2.2.2 so we are refraining from using the pd.read_sql and similar
+xlrd = "~=2.0.1"
+openpyxl = "~=3.1.0"
+
+[dev-packages]
+pytest = "==8.*"
+black = "*"
+flake8 = "*"
+isort = "*"
+ipython = "*"
+ipykernel = "*"
+
+[requires]
+python_version = "3.12"
